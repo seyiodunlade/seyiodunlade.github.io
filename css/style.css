@@ -1,0 +1,390 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    background: red;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#container{
+
+    height: 80vh;
+    width: 85vw;
+    color: white;
+    /* border: 1px solid red; */
+
+}
+
+#screen{
+
+    height: 140px;
+    width: 100% !important;
+    /* border: 1px solid green; */
+    background: #000;
+}
+
+#degRadIndicator{
+    
+    width: 100%;
+    height: 18%;
+    text-align: left;
+    padding-top: 8px;
+    padding-left: 20px;
+
+}
+
+/* #screen #userInput{
+
+    unicode-bidi: bidi-override !important;
+    direction: unset;
+    text-align: right;
+    width: 100%;
+    height: 82%;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #000;
+
+}
+
+#screen #answer{
+    
+    unicode-bidi: bidi-override !important;
+    direction: unset;
+    text-align: right;
+    width: 100%;
+    height: 0;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #000;
+
+}
+
+#screen #userInput, #screen #answer{
+    padding-right: 10px;
+    padding-left: 10px;
+} */
+
+#screen input{
+    display: block;
+    caret-color: #fff;
+    unicode-bidi: bidi-override !important;
+    direction: unset;
+    text-align: right;
+    width: 100% !important;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #000;
+    padding-bottom: 10px;
+    padding-left: 8px;
+    padding-right: 8px;
+
+}
+
+#content{
+
+    position: relative;
+    height: 400px;
+    /* border: 1px solid green; */
+    
+
+}
+
+
+#content #content1{
+/* 
+    display: none !important; */
+    height: 100%;
+    
+    /* border: 1px solid #000; */
+    
+
+}
+
+#content #content1 #wrapper{
+
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+@keyframes showContent2{
+    0%{
+
+        top: 0;
+        opacity: 0;
+
+    }
+
+    25%{
+
+        top: -102px;
+        opacity: 0.25;
+
+    }
+
+    50%{
+
+        top: -204px;
+        opacity: 0.5;
+
+    }
+
+    75%{
+
+        top: -306px;
+        opacity: 0.75;
+
+    }
+
+    100%{
+
+        top: -408px;
+        opacity: 1;
+
+    }
+
+}
+
+#content #content2{
+
+    position: relative;
+    /* top: -408px; */ 
+    top: 0px;
+    opacity: 0;
+    display: none;
+    height: 100%;
+    width: 100%;
+    /* border: 1px solid blue; */
+    background: rgb(208,104,5);
+    animation-name: showContent2;
+    animation-duration: 600ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+}
+
+#content #content1 #wrapper #numContainer{
+   
+    height: 100%;
+    padding-top: 45px;
+    padding-left: 15px;
+    background: rgb(22,22,22);
+    flex-basis: 70%;
+    display: grid;
+	grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto auto;
+    gap: 30px 30px;
+
+}
+
+#content #content1 #wrapper #operatorsContainer{
+
+    flex-basis: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(32,32,32);
+    
+
+}
+
+
+#content #content1 #wrapper #numContainer .numbers:hover, #content #content1 #wrapper #operatorsContainer .simpleOperators:hover{
+
+    background: rgb(69,69,69);
+    
+}
+
+#content #content1 #wrapper #numContainer div, #content #content1 #wrapper #operatorsContainer div{
+
+    text-align: center;
+    /* border: 1px solid blue; */
+    border-radius: 50%;
+    height: 50px;
+    width: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin:0;
+    
+}
+
+#content #content1 #wrapper #operatorsContainer div#openContent2 {
+
+    cursor: pointer;
+
+}
+
+#content #content1 #wrapper #operatorsContainer div{
+
+    margin-bottom: 10px;
+
+}
+
+#content #content2 #operatorsContainer2 .complexOperators:hover{
+
+    background: rgba(0,0,0,0.5);
+    
+}
+
+#content #content2 #closeContent2{
+
+    margin-left: 10px;
+    margin-top: 8px;
+    font-family: "comic sans ms";
+    cursor: pointer;
+
+}
+
+#content #content2 #equalToOperator2{
+
+    margin-left: 80%;
+    margin-top: 8px;
+    font-weight: 800;
+    cursor: pointer;
+
+}
+
+#content #content2 #operatorsContainer2{
+
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto auto;
+    gap: 30px 30px;
+    /* border: 1px solid #fff; */
+    margin-top: 30px;
+    padding-left: 30px;
+
+}
+
+#content #content2 #operatorsContainer2 .complexOperators {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid #fff; */
+    height: 40px;
+    width: 60px; 
+    border-radius: 50%;  
+
+}
+
+#content #content2 #operatorsContainer2 .complexOperators {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid #fff; */
+    height: 40px;
+    width: 60px; 
+    border-radius: 50%;  
+
+}
+
+#content #content2 #operatorsContainer2 #inverseOperator,
+#content #content2 #operatorsContainer2 #radOrDegOperator{
+
+      cursor: pointer;
+
+}
+
+
+@media screen and (min-width: 870px){
+
+    #container{
+
+        width: 850px;
+        /* border: 1px solid green; */
+
+    }
+
+    #content{
+
+        position: relative;
+        overflow: visible;
+        height: 75%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        
+    
+    }
+
+    #content #content1, #content #content2{
+        flex-basis: 50%;
+        height: 100%;
+        
+    }
+
+    #screen{
+
+        height: 25%;
+        width: 100%;
+        background: #000;
+        border: none;
+    }
+    #content #content2{
+
+        opacity: 1 !important;
+        display: block !important;
+        position: static;
+        display: inline-block;
+        background: rgb(208,104,5);
+        animation-name: none;
+    
+    }
+
+    #content #content2 #closeContent2{
+
+        display: none;
+        margin-left: 10px;
+        margin-top: 8px;
+        font-family: "comic sans ms";
+        cursor: pointer;
+    
+    }
+
+    #content #content2 #equalToOperator2{
+
+        display: none;
+
+    }
+
+    #content #content1 #wrapper #operatorsContainer #openContent2{
+
+        display: none;
+
+    }
+
+    
+
+}
+

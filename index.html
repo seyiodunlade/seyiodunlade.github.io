@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<style>
+
+			body{
+				background: rgb(255, 189, 127) !important;
+			}
+
+		</style>
+	</head>
+	
+	<body>
+		
+		<div id="container">
+			
+			<div id="screen">
+				<p id="degRadIndicator">DEG</p>
+				<input type="text" id="userInput" readonly>
+				<input type="text" id="answer" readonly>
+			
+			</div>
+			
+			<div id="content">
+					<div id="content1">
+						<div id="wrapper">
+							<div id="numContainer">
+
+								<div class="numbers">7</div>						
+								<div class="numbers">8</div>						
+								<div class="numbers">9</div>						
+								<div class="numbers">4</div>						
+								<div class="numbers">5</div>						
+								<div class="numbers">6</div>						
+								<div class="numbers">1</div>						
+								<div class="numbers">2</div>						
+								<div class="numbers">3</div>						
+								<div class="numbers" id="decimalPoint">.</div>						
+								<div class="numbers">0</div>						
+								<div class="numbers equalToOperator">=</div>						
+
+							</div>
+							<div id="operatorsContainer">
+
+								<div class="simpleOperators" id="deleteOperator">DEL</div>
+								<div class="simpleOperators" id="answerOperator">ANS</div>
+								<div class="simpleOperators" id="divideOperator">&#247;</div>
+								<div class="simpleOperators" id="multiplyOperator">x</div>
+								<div class="simpleOperators" id="minusOperator">-</div>
+								<div class="simpleOperators" id="addOperator">+</div>
+								<div class="simpleOperators" id="openContent2">...</div>
+
+							</div>
+						</div>
+					</div>
+					<div id="content2">
+						<div id="closeContent2">x</div><div id="equalToOperator2" class="numbers equalToOperator">=</div>
+						<div id="operatorsContainer2">
+							<div class="complexOperators" id="inverseOperator">INV</div>
+							<div class="complexOperators" id="radOrDegOperator">RAD</div>
+							<div class="complexOperators" id="percentOperator">%</div>
+							<div class="complexOperators" id="sinOperator">sin</div>
+							<div class="complexOperators" id="cosOperator">cos</div>
+							<div class="complexOperators" id="tanOperator">tan</div>
+							<div class="complexOperators" id="naturalLog">ln</div>
+							<div class="complexOperators" id="logOperator">log</div>
+							<div class="complexOperators" id="factorialOperator">!</div>
+							<div class="complexOperators" id="piOperator">&pi;</div>
+							<div class="complexOperators" id="exponentValueOperator">e</div>
+							<div class="complexOperators" id="powerOperator">^</div>
+							<div class="complexOperators" id="openParaOperator">(</div>
+							<div class="complexOperators" id="closeParaOperator">)</div>
+							<div class="complexOperators" id="sqrtOperator">&#8730;</div>
+						</div>
+
+					</div>
+
+
+			
+			</div>
+		
+		</div>
+		<script src="js/calc.js"></script>
+		<script>
+
+			let openContent2 = document.querySelector('#content #content1 #operatorsContainer #openContent2');
+			openContent2.addEventListener('click', function(){
+				console.log('you just clicked a button');
+				document.querySelector('#content2').style.display = "block"
+			})
+
+			let closeContent2 = document.querySelector('#content #content2 #closeContent2');
+			closeContent2.addEventListener('click', function(){
+				console.log('you just clicked a button');
+				document.querySelector('#content2').style.display = "none"
+			})
+			
+
+		</script>
+	
+	</body>
+
+
+</html>
