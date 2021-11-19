@@ -446,6 +446,7 @@ simpleOperators.forEach(simpleOperator => {
             simpleOperator.innerText = 'DEL';
             simpleOperator.setAttribute("id", "deleteOperator");
             userInput.value = '';
+            document.getElementById('answer').value = '';
             calc_formula = [];
             calc_str = [];
         }
